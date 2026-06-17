@@ -1,9 +1,10 @@
-package Main;
+package main;
+
+import tictactoe.TicTacToe;
 
 public class Main {
-    static void main() {
-        System.out.println("Hallo!");
-        System.out.println("test");
-        
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+        game.start();
     }
 }
