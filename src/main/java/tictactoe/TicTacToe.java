@@ -27,10 +27,10 @@ public class TicTacToe {
     private boolean playRound(Scanner scanner) {
         board.print();
         System.out.println("Current Player: " + currentPlayer.getMarker());
-        System.out.print("row (0-2): ");
-        int row = scanner.nextInt();
-        System.out.print("column (0-2): ");
-        int col = scanner.nextInt();
+        System.out.print("Enter a number (1-9): ");
+        int number = scanner.nextInt();
+        int row = (number - 1) / 3;
+        int col = (number - 1) % 3;
         if (!board.isCellEmpty(row, col)) {
             System.out.println("Cell is already taken, try again!");
             return true;
